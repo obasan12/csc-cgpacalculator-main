@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA Calculator</h1>
+
+      
+        <p id="error-message" class="error-message"></p>
+
+        <form id="cgpa-form">
+            <table id="course-list-table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Units</th>
+                        <th>Grade</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="course-list">
+                    
+                </tbody>
+            </table>
+            <button type="button" id="add-course-btn" class="btn">Add Another Course</button>
+            <button type="submit" class="btn">Calculate GPA</button>
+        </form>
+
+        <div class="output">
+            <h2>GPA: <span id="gpa-output">N/A</span></h2>
+            <h2>CGPA: <span id="cgpa-output">N/A</span></h2>
+        </div>
+
+        
+        <h2>CGPA Breakdown</h2>
+        <table id="cgpa-table">
+            <thead>
+                <tr>
+                    <th>Semester</th>
+                    <th>Total TCP</th>
+                    <th>Total TLU</th>
+                    <th>GPA</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="no-data">
+                    <td colspan="5">No data available</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>

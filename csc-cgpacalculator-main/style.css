@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    perspective: 1000px; 
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); 
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: rotateY(2deg) rotateX(2deg); 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1); /* 3D text shadow */
+}
+
+h2 {
+    color: #444;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+#course-list div {
+    margin-bottom: 15px;
+    transform: rotateY(2deg) translateZ(2px); /* Adds a 3D depth to input fields */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"], select {
+    padding: 10px;
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fafafa;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 3D input shadow */
+    transition: transform 0.2s ease;
+}
+
+input[type="number"]:focus, select:focus {
+    transform: translateZ(10px); /* Zoom-in on focus for 3D feel */
+    background-color: #fff;
+}
+
+/* Button with 3D effect */
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    max-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-4px); /* Button lifts up on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Output Styling */
+.output {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.output h2 {
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.output span {
+    font-weight: bold;
+    color: #007bff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15); /* Adds a glowing effect */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 3D cell shadow */
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translateZ(2px);
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    transform: translateZ(5px); 
+}
+
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.2); 
+}
